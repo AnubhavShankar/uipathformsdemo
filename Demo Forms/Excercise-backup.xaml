@@ -1,0 +1,168 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1476,873.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="24">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="618.666666666667,808.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="selectedButton" />
+      <Variable x:TypeArguments="x:String" Name="imageFile" />
+      <Variable x:TypeArguments="x:String" Name="img" />
+      <Variable x:TypeArguments="x:String" Name="pdfFile" />
+      <Variable x:TypeArguments="x:String" Name="pdf" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List (of String)from {&quot;India&quot;,&quot;United States&quot;,&quot;Germany&quot;}]" Name="country" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" Default="[new Dictionary(of string,List(of string))]" Name="state" />
+      <Variable x:TypeArguments="x:String" Name="selectedCountry" />
+      <Variable x:TypeArguments="x:String" Name="currentCountry" />
+      <Variable x:TypeArguments="x:String" Name="selectedCascadeCountry" />
+      <Variable x:TypeArguments="x:String" Name="selectedCascadeState" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="576.666666666667,158.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:List(x:String)">[state("India")]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:List(x:String)">[new list(of string)({"Delhi","Maharashtra","Kerela","Tamil Nadu"})]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:List(x:String)">[state("United States")]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:List(x:String)">[new List(of string)({"California","Alaska","Texas","Florida"})]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:List(x:String)">[state("Germany")]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:List(x:String)">[new List(of String)({"Bavaria","Hessen","Saxony"})]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <ufa:FormActivity Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormFieldsOutputData="{x:Null}" FormTitle="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" DisableMaximizeButton="False" DisableMinimizeButton="False" DisplayName="Create Form" FormHeight="400" FormSchema="%[{&quot;components&quot;:[{&quot;label&quot;:&quot;Image&quot;,&quot;key&quot;:&quot;image&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;File/Folder Path&quot;,&quot;customClass&quot;:&quot;filePath&quot;,&quot;key&quot;:&quot;imgFile&quot;,&quot;input&quot;:true,&quot;suffix&quot;:&quot;Select&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;filePath&quot;,&quot;calculateServer&quot;:false,&quot;spellcheck&quot;:true},{&quot;label&quot;:&quot;Load Image&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;loadImage&quot;,&quot;properties&quot;:{&quot;closeOnSubmit&quot;:&quot;false&quot;},&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;calculateServer&quot;:false},{&quot;label&quot;:&quot;ImageViewer&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;img src=\&quot;{{data.img}}\&quot; /&gt;&quot;,&quot;refreshOnChange&quot;:true,&quot;key&quot;:&quot;imageViewer&quot;,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false}]},{&quot;label&quot;:&quot;DropDowns&quot;,&quot;key&quot;:&quot;dropDowns&quot;,&quot;components&quot;:[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Country&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;&quot;}]},&quot;key&quot;:&quot;country&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;State&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;&quot;}]},&quot;key&quot;:&quot;state&quot;,&quot;logic&quot;:[{&quot;name&quot;:&quot;logic&quot;,&quot;trigger&quot;:{&quot;type&quot;:&quot;javascript&quot;,&quot;javascript&quot;:&quot;result= true;&quot;},&quot;actions&quot;:[{&quot;name&quot;:&quot;action&quot;,&quot;type&quot;:&quot;mergeComponentSchema&quot;,&quot;schemaDefinition&quot;:&quot;schema = {data : {values : data.state_parent[data.country]}}&quot;}]}],&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;tableView&quot;:false,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;label&quot;:&quot;Columns&quot;},{&quot;label&quot;:&quot;Multiple Countries&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;multiple&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;&quot;}]},&quot;validate&quot;:{&quot;multiple&quot;:true},&quot;key&quot;:&quot;multipleCountries&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true},{&quot;label&quot;:&quot;Current Country&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;&quot;}]},&quot;customDefaultValue&quot;:&quot;const updateOnChange = instance.updateOnChange;\r\ninstance.updateOnChange = function(flags, changed) {\r\nif (flags.modified) {\r\ninstance.emit('dropdownChanged', 'countryChanged');\r\n}\r\nreturn updateOnChange.call(instance, flags, changed);\r\n}&quot;,&quot;key&quot;:&quot;currentCountry&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true},{&quot;label&quot;:&quot;Selected Country&quot;,&quot;spellcheck&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;selectedCountry&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]},{&quot;label&quot;:&quot;Advance Logic&quot;,&quot;key&quot;:&quot;advanceLogic&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;Role&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;Admin&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;label&quot;:&quot;Manager&quot;,&quot;value&quot;:&quot;manager&quot;},{&quot;label&quot;:&quot;Developer&quot;,&quot;value&quot;:&quot;developer&quot;},{&quot;label&quot;:&quot;Business Analyst&quot;,&quot;value&quot;:&quot;businessAnalyst&quot;}]},&quot;key&quot;:&quot;role&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true},{&quot;label&quot;:&quot;Project Name&quot;,&quot;spellcheck&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;projectName&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Allocated Budget&quot;,&quot;spellcheck&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;allocatedBudget&quot;,&quot;customConditional&quot;:&quot;show=(data.role==\&quot;admin\&quot; || data.role==\&quot;manager\&quot;)&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Comment&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;comment&quot;,&quot;logic&quot;:[{&quot;name&quot;:&quot;Check Budget limit 10000&quot;,&quot;trigger&quot;:{&quot;type&quot;:&quot;javascript&quot;,&quot;simple&quot;:{&quot;show&quot;:true},&quot;javascript&quot;:&quot;result = data.allocatedBudget &gt; 10000&quot;},&quot;actions&quot;:[{&quot;name&quot;:&quot;Add help info to comment&quot;,&quot;type&quot;:&quot;property&quot;,&quot;property&quot;:{&quot;label&quot;:&quot;Tooltip&quot;,&quot;value&quot;:&quot;tooltip&quot;,&quot;type&quot;:&quot;string&quot;},&quot;text&quot;:&quot;submit reason for high budget value&quot;},{&quot;name&quot;:&quot;Make Comment Mandatory&quot;,&quot;type&quot;:&quot;property&quot;,&quot;property&quot;:{&quot;label&quot;:&quot;Required&quot;,&quot;value&quot;:&quot;validate.required&quot;,&quot;type&quot;:&quot;boolean&quot;},&quot;state&quot;:true}]}],&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Submit&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;submit&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;}]},{&quot;label&quot;:&quot;PDF Spinner&quot;,&quot;key&quot;:&quot;pdfSpinner&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;PDF File&quot;,&quot;customClass&quot;:&quot;filePath&quot;,&quot;key&quot;:&quot;pdfFile&quot;,&quot;input&quot;:true,&quot;suffix&quot;:&quot;Select&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;filePath&quot;,&quot;calculateServer&quot;:false,&quot;spellcheck&quot;:true},{&quot;label&quot;:&quot;Load PDF&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;loadPdf&quot;,&quot;properties&quot;:{&quot;closeOnSubmit&quot;:&quot;false&quot;},&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;calculateServer&quot;:false},{&quot;label&quot;:&quot;PDF Viewer&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;iframe src=\&quot;{{data.pdf}}\&quot; width=\&quot;100%\&quot; height=\&quot;600px\&quot; /&gt;&quot;,&quot;refreshOnChange&quot;:true,&quot;key&quot;:&quot;pdfViewer&quot;,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false}]}],&quot;key&quot;:&quot;tabs1&quot;,&quot;properties&quot;:{&quot;defaultTab&quot;:&quot;2&quot;},&quot;type&quot;:&quot;tabs&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Tabs&quot;,&quot;calculateServer&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="False" sap:VirtualizedContainerService.HintSize="576.666666666667,518" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False" SelectedButton="[selectedButton]">
+      <ufa:FormActivity.Body>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538.666666666667,392" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[selectedButton]" sap:VirtualizedContainerService.HintSize="496.666666666667,300" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+              <Assign x:Key="loadImage" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[img]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["/file://"+imageFile]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign x:Key="loadPdf" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[pdf]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["/file://"+pdfFile]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign x:Key="countryChanged" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[selectedCountry]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[currentCountry]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Switch>
+          </Sequence>
+        </ActivityAction>
+      </ufa:FormActivity.Body>
+      <ufa:FormActivity.DelayBody>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </ActivityAction>
+      </ufa:FormActivity.DelayBody>
+      <ufa:FormActivity.FormFieldsCollection>
+        <OutArgument x:TypeArguments="x:String" x:Key="imgFile">[imageFile]</OutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="img">[img]</InOutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="pdfFile">[pdfFile]</OutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="pdf">[pdf]</InOutArgument>
+        <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="country_dropdown">[country]</InOutArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="state_dropdown">[state]</InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="state_parent">country</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="multipleCountries_dropdown">[country]</InArgument>
+        <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="currentCountry_dropdown">[country]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="selectedCountry">[selectedCountry]</InOutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="currentCountry">[currentCountry]</OutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="country">[selectedCascadeCountry]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="state">[selectedCascadeState]</InOutArgument>
+      </ufa:FormActivity.FormFieldsCollection>
+    </ufa:FormActivity>
+  </Sequence>
+</Activity>
